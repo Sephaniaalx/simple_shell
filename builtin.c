@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * exit - this exits the simple shell
- * @info: the structure containing the arguments
+ * exit_ - this exits the simple shell
+ * @info: Pointer to the info_t structure
  * Return: exits with a given exit status
  * if info argv[0] != "exit" returns 0
  */
@@ -31,7 +31,7 @@ int exit_(info_t *info)
 
 /**
  * _cd - changes the current directory
- * @info: structure containing the arguments
+ * @info: Pointer to the info_t structure
  * Return: Always 0
  */
 
@@ -47,7 +47,7 @@ int _cd(info_t *info)
 	{
 		dir = get_env(info, "HOME=");
 		if (!dir)
-			chdir_ret = chdir((dir = get_env(info, "PWD =")) ? dir : "/");
+			chdir_ret = chdir((dir = get_env(info, "PWD=")) ? dir : "/");
 		else
 			chdir_ret = chdir(dir);
 	}
@@ -81,7 +81,7 @@ int _cd(info_t *info)
 
 /**
  * help - changes the current directory
- * @info: structure containing argument
+ * @info: Pointer to the info_t structure
  * Return: Always 0
  */
 

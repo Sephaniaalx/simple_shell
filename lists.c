@@ -147,7 +147,9 @@ void f_list(list_t **head_ptr)
 	list_t *node, *next_node, *head;
 
 	if (!head_ptr || !*head_ptr)
+	{
 		return;
+	}
 	head = *head_ptr;
 	node = head;
 	while (node)

@@ -30,9 +30,13 @@ void f_free(char **pp)
 	char **d = pp;
 
 	if (!pp)
+	{
 		return;
+	}
 	while (*pp)
+	{
 		free(*pp++);
+	}
 	free(d);
 }
 

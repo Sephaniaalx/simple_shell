@@ -17,10 +17,10 @@ int err_atoi(char *s)
 	}
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] >= '\0' && s[i] <= '9')
+		if (s[i] >= '0' && s[i] <= '9')
 		{
 			result *= 10;
-			result += (s[i] - '\0');
+			result += (s[i] - '0');
 			if (result > INT_MAX)
 			{
 				return (-1);
@@ -44,11 +44,11 @@ int err_atoi(char *s)
 void p_error(info_t *info, char *estr)
 {
 	_eputs(info->fname);
-	_eputs(" ");
+	_eputs(": ");
 	print_decimal(info->line_count, STDERR_FILENO);
-	_eputs(" ");
+	_eputs(": ");
 	_eputs(info->argv[0]);
-	_eputs(" ");
+	_eputs(": ");
 	_eputs(estr);
 }
 
@@ -140,13 +140,13 @@ char *c_number(long int num, int base, int flags)
 
 void r_comments(char *buf)
 {
-	int i;
+	int j;
 
-	for (i = 0; buf[i] != '\0'; i++)
+	for (j = 0; buf[j] != '\0'; j++)
 	{
-		if (buf[i] == '#' && (!i  || buf[i - 1] == ' '))
+		if (buf[j] == '#' && (!j  || buf[j - 1] == ' '))
 		{
-			buf[i] =   '\0';
+			buf[j] =   '\0';
 			break;
 		}
 	}

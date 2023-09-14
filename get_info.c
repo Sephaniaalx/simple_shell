@@ -81,8 +81,8 @@ void f_info(info_t *info, int all)
 		f_free(info->environ);
 			info->environ = NULL;
 		b_free((void **)info->cmd_buf);
-		{
 		if (info->readfd > 2)
+		{
 			close(info->readfd);
 		}
 		_putchar(BUF_FLUSH);

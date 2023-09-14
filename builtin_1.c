@@ -65,9 +65,9 @@ int print_alias(list_t *node)
 		for (a = node->str; a <= p; a++)
 		{
 			_putchar(*a);
-			_putchar('\\');
+			_putchar('\'');
 			_puts(p + 1);
-			_puts("\n");
+			_puts("'\n");
 			return (0);
 		}
 	}
@@ -76,7 +76,7 @@ int print_alias(list_t *node)
 
 /**
 * _alias - Display or manages shell aliases
-* @info: Poinetr to the info_t structure
+* @info: Pointer to the info_t structure
 *
 * Return: Always 0
 */

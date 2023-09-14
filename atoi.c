@@ -76,14 +76,16 @@ int atoi_(char *s)
 		{
 			flag = 2;
 		}
-		if (sign == -1)
-		{
-			output = -result;
-		}
-		else
-		{
-			output = result;
-		}
 	}
+
+	if (sign == -1)
+	{
+		output = -result;
+	}
+	else
+	{
+		output = result;
+	}
+
 	return (output);
 }
