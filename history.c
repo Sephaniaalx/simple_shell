@@ -71,7 +71,7 @@ int read_hist(info_t *info)
 	int a, last = 0, linecount = 0;
 
 	ssize_t fd, rdlen, fsize = 0;
-	struct stat ht;
+	struct stat st;
 	char *buf = NULL, *filename = get_hist_file(info);
 
 	if (!filename)
@@ -81,8 +81,8 @@ int read_hist(info_t *info)
 	free(filename);
 	if (fd == -1)
 		return (0);
-	if (!fstat(fd, &ht))
-		fsize = ht.st_size;
+	if (!fstat(fd, &st))
+		fsize = st.st_size;
 	if (fsize < 2)
 		return (0);
 	buf = malloc(sizeof(char) * (fsize + 1));

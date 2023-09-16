@@ -59,7 +59,7 @@ int set_env(info_t *info)
 /**
  * _unsetenv - This removes an environment variable
  * @info: Pointer to the info_t structure
- * Return: Always 0
+ * Return: Always 0 on success and 1 on error
  */
 
 int _unsetenv(info_t *info)
@@ -68,10 +68,10 @@ int _unsetenv(info_t *info)
 
 	if (info->argc == 1)
 	{
-		_eputs("Few arguments\n");
+		_eputs("Too few arguments\n");
 		return (1);
 	}
-	for (i = 1; i <= info->argc; i++)
+	for (i = 1; i < info->argc; i++)
 	{
 		un_setenv(info, info->argv[i]);
 	}

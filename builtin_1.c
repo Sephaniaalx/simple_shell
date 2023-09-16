@@ -53,7 +53,7 @@ int set_alias(info_t *info, char *str)
 /**
  * print_alias - this prints an alias of a string
  * @node: this is the alias node
- * Return: Always 0
+ * Return: Always 0 on success and 1 on error
  */
 int print_alias(list_t *node)
 {
@@ -62,9 +62,12 @@ int print_alias(list_t *node)
 	if (node)
 	{
 		p = _strchr(node->str, '=');
-		for (a = node->str; a <= p; a++)
+		if (p)
 		{
-			_putchar(*a);
+			for (a = node->str; a <= p; a++)
+			{
+				_putchar(*a);
+			}
 			_putchar('\'');
 			_puts(p + 1);
 			_puts("'\n");
