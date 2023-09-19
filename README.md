@@ -1,1 +1,1 @@
-Our readme for the shell project
+This is a shell program that mimics the actual shell program
