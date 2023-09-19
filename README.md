@@ -1,1 +1,1 @@
-A shell program created by Hendricks and Sephania
+Our Readme for the shell project
