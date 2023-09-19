@@ -1,1 +1,1 @@
-This is beautiful. We rock
+A shell program created by Hendricks and Sephania
