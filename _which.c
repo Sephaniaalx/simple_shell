@@ -5,7 +5,7 @@
 char **mystrtok(const char *delim, char *line);
 /**
  * _which - Find the full path of a command in the PATH environment variable.
- * @env: An array of environment variables.
+ * @env: An array of environments variables.
  * @command: The command to search for.
  *
  * Return: The full path of the command if found, or NULL if not found.
