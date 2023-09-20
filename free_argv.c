@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
 /**
- * free_argv - frees an array
+ * free_argv - frees an array.
  *
  * @argv: array
  * @lineptr: pointer to the line
