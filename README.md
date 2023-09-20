@@ -1,2 +1,2 @@
 Our Readme for the shell project
-Yeah its is beautiful and 
+Yeah its is beautiful 
