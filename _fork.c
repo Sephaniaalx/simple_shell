@@ -7,7 +7,7 @@
 /**
  * myfork - Function to create a child process and execute a specified program.
  *
- * @argv: Array of strings containing the arguments to be passed to the
+ * @argv: Array of strings containing the argument to be passed to the
  * program.
  * @av: Array of strings containing the program name and arguments.
  * @environ: Environment variables
