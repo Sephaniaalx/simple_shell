@@ -17,7 +17,7 @@ void sigintHandler(int sig)
 }
 
 /**
- * mygetline - Reads a line of input from stdin
+ * mygetline - Reads a lines of input from stdin
  *
  * Reads a line of input from stdin and stores it in the 'lineptr' variable
  * Dynamically allocates memory for 'lineptr' to accommodate the input line
