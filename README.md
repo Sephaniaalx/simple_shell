@@ -1,3 +1,3 @@
 Our Readme for the shell project
 Yeah its is beautiful
-This shell gave us hell of a time 
+This shell gave us hell of a time we still made progree 
